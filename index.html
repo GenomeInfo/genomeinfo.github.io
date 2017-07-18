@@ -1,16 +1,8 @@
-<HTML>
-<HEAD>
- <TITLE>Welcome</TITLE>
- <STYLE type="text/css">
-  BODY { text-align: center}
-  DIV { margin-top: 300px}
- </STYLE>
-<BODY>
-<DIV>
-Here you are.<br>
-<br>
-&#215;
-</DIV>
-</BODY>
-</HTML>
+---
+layout: default
+---
 
+<h1>Projects</h1>
+{% for repository in site.github.public_repositories %}
+  * {{ repository.name }}
+{% endfor %}
